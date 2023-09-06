@@ -43,4 +43,6 @@ dev
 .env
 
 *.key
-*.key.pub
+*.key.
+
+.history/
