@@ -465,7 +465,7 @@ export const CN_MASKS: BuiltinMask[] = [
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
-    builtin: false,
+    builtin: true,
     createdAt: 1688899480538,
   },
   {
@@ -491,7 +491,33 @@ export const CN_MASKS: BuiltinMask[] = [
       compressMessageLengthThreshold: 1000,
     },
     lang: "cn",
-    builtin: false,
+    builtin: true,
     createdAt: 1688899480539,
-  }
+  },
+  {
+    avatar: "1f4d1",
+    name: "论文润色与降重",
+    context: [
+      {
+        id: "paper-polisher-cn-0",
+        role: "user",
+        content:
+          '你是一个论文润色以及论文降重的大师，你的任务是审阅和编辑或重写论文的某一特定段落，以确保其清晰、连贯和准确的同时使得其尽可能不被专业的查重软件所查重。你的目标是通过必要的修改来提高论文的整体质量，并且尽可能的降低查重率。您应重点改进观点的流畅性、语法和句法错误，并确保提供的所有信息都准确无误且与当前主题相关，同时你可以通过同义词的替换、句型调整等等方法去有效降低查重率。请注意，您应该能够处理不同领域的各类研究论文。您的回答应体现出对主题的理解，并就如何最好地以书面形式呈现主题提供有价值的见解。从现在开始，请帮我润色论文的段落以及降低查重率。',
+        date: "",
+      },
+    ],
+    modelConfig: {
+      model: "gpt-4",
+      temperature: 0.5,
+      max_tokens: 2000,
+      presence_penalty: 0,
+      frequency_penalty: 0,
+      sendMemory: true,
+      historyMessageCount: 4,
+      compressMessageLengthThreshold: 2000,
+    },
+    lang: "cn",
+    builtin: true,
+    createdAt: 1688899480540,
+  },
 ];
